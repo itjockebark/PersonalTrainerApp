@@ -1,31 +1,33 @@
-package itjockebark.personaltrainer.auth;
+/*package itjockebark.personaltrainer.auth;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
-import java.util.List;
+import java.util.Set;
 
+@Entity
 public class UserAuthentication implements UserDetails {
-    private final List<? extends GrantedAuthority> grantedAuthorities;
+
+    private final Set<? extends GrantedAuthority> grantedAuthorities;
     private final String password;
-    private final String email;
+    private final String username;
     private final boolean isAccountNonExpired;
     private final boolean isAccountNonLocked;
     private final boolean isCredentialsNonExpired;
     private final boolean isEnabled;
 
 
-    public UserAuthentication(String password,
-                              String email,
-                              List<? extends GrantedAuthority> grantedAuthorities,
+    public UserAuthentication(String username,
+                              String password,
+                              Set<? extends GrantedAuthority> grantedAuthorities,
                               boolean isAccountNonExpired,
                               boolean isAccountNonLocked,
                               boolean isCredentialsNonExpired,
                               boolean isEnabled) {
         this.grantedAuthorities = grantedAuthorities;
         this.password = password;
-        this.email = email;
+        this.username = username;
         this.isAccountNonExpired = isAccountNonExpired;
         this.isAccountNonLocked = isAccountNonLocked;
         this.isCredentialsNonExpired = isCredentialsNonExpired;
@@ -44,7 +46,7 @@ public class UserAuthentication implements UserDetails {
 
     @Override
     public String getUsername() {
-        return email;
+        return username;
     }
 
     @Override
@@ -66,4 +68,4 @@ public class UserAuthentication implements UserDetails {
     public boolean isEnabled() {
         return isEnabled;
     }
-}
+}*/
